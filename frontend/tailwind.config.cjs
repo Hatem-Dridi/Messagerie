@@ -4,12 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        login: "rgb(255, 245, 157)",
-        register: "rgb(144, 202, 249)",
-        primary: "#251e3e",
-        secondary: "#5b5d8d",
-        "empty-chat": "#9fa8da",
-        navbg: "rgba(0, 0, 0, .2)",
+        login: "#E5E1DA",
+        register: "#E5E1DA",
+        primary: "rgba(0 0 0 / 0.1)",
+        secondary: "rgba(0 0 0 / 0.6)",
+        "empty-chat": "rgb(0 0 0 / 40%)",
+        navbg: "rgba(0, 0, 0, .8)",
         dodger: "#1e90ff",
       },
       fontFamily: {

@@ -6,6 +6,8 @@ import AuthContext from '../contexts/AuthContext';
 import ChatContext from '../contexts/ChatContext';
 import MessageContext from '../contexts/MessageContext';
 import { User } from '../types';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'; // Import the default styles
 
 function Home() {
 
@@ -23,6 +25,10 @@ function Home() {
     const { user } = state;
     const currentUser = user as User;
 
+    const notify = () => {
+        toast("You recieved a new message!");
+      };
+
     React.useEffect(() => {
         socket.current = io("http://localhost:9000");
         socket.current.emit("add-new-user", currentUser?.id);
@@ -34,6 +40,7 @@ function Home() {
 
     React.useEffect(() => {
         socket.current.on("receive-message", data => {
+            notify()
             console.log(data)
           setMessages(prev => (
             [...prev, data]
@@ -58,6 +65,7 @@ function Home() {
 
     return (
         <div className='flex justify-center items-center h-screen'>
+             <ToastContainer /> 
             {
                 window.innerWidth > 1200 ? (
                     <div className='flex justify-center w-[90%] h-[500px]'>

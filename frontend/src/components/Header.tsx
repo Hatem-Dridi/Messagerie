@@ -17,7 +17,7 @@ function Header() {
     const isMyUsername = chat?.friendDetails.friendUsername === currentUser.userName;
 
     return (
-        <div className='bg-[#3e3c61] flex justify-between items-center h-10 px-2'>
+        <div className='bg-[#000000cc] flex justify-between items-center h-10 px-2'>
             <IoArrowBackSharp onClick={hideChat} cursor={"Pointer"} className="mobile:block hidden" />
             <p>{ isMyUsername ? chat.friendDetails.userName : chat?.friendDetails.friendUsername }</p>
 
