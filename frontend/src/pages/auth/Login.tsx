@@ -60,11 +60,6 @@ function Login() {
             <NavBar />
 
             <div className='flex flex-wrap justify-around items-center mt-20 mb-8'>
-                <div>
-                    <img className='w-[340px]' src={login} alt="register" />
-                    <p className='sm:text-2xl text-lg text-center'>Welcome back. Login your account to continue having fun.</p>
-                </div>
-
                 <div className='bg-navbg text-center sm:mt-0 mt-8 sm:w-96 h-[400px] flex flex-col rounded-lg p-6'>
                     <h2 className='text-2xl font-heading'>Login</h2>
 
