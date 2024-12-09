@@ -9,7 +9,7 @@ module.exports = {
         primary: "rgba(0 0 0 / 0.1)",
         secondary: "rgba(0 0 0 / 0.6)",
         "empty-chat": "rgb(0 0 0 / 40%)",
-        navbg: "rgba(0, 0, 0, .8)",
+        navbg: "rgba(0, 0, 0, .5)",
         dodger: "#1e90ff",
       },
       fontFamily: {

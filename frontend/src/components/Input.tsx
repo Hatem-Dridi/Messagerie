@@ -171,7 +171,7 @@ function Input({ socket }: { socket: React.MutableRefObject<Socket> }) {
     
 
     return (
-        <form onSubmit={handleSend} className={`${chat ? "bg-white" : "bg-empty-chat"} flex items-center h-14 w-full`}>
+        <form onSubmit={handleSend} className={`${chat ? "bg-black" : "bg-empty-chat"} flex items-center h-14 w-full`}>
             {
                 chat && (
                     <>
@@ -201,7 +201,9 @@ function Input({ socket }: { socket: React.MutableRefObject<Socket> }) {
                                 </div>
                             </div>
 
-                            <button data-tooltip='send message' className='tooltip text-2xl text-primary mobile:text-lg mobile:mr-4 mr-5 rounded-md'><FiSend /></button>
+                            <button data-tooltip='send message' className='tooltip text-2xl text-primary mobile:text-lg mobile:mr-4 mr-5 rounded-md'>
+                                <img style={{ width: '24px' }} src="../src/assets/send-message.png" alt="" />
+                            </button>
                         </div>
                     </>
                 )

@@ -76,11 +76,7 @@ function Register() {
             <NavBar />
 
             <div className='flex flex-wrap justify-around items-center mt-20'>
-                <div>
-                    <img className='w-[340px]' src={register} alt="register" />
-                    <p className='sm:text-2xl text-lg text-center'>Register with us to enjoy realtime chats like no other.</p>
-                </div>
-
+               
                 <div className='bg-navbg text-center sm:mt-0 mt-8 sm:w-96 h-[500px] flex flex-col rounded-lg p-6'>
                     <h2 className='text-2xl font-heading'>Register</h2>
 

@@ -59,13 +59,13 @@ function Messages({ message }: {message: MessagesProp}) {
     return (
         <div ref={div} className={`${isOwner ? "owner" : "not-owner"} px-2 my-3`}>
             <div className={`${isOwner && "flex flex-col items-end"}`}>
-                {message.text && <div className={`${isOwner ? "owner" : "not-owner"} bg-[#3e3c61] w-fit p-1 max-w-[200px] rounded-b-lg`}>
+                {message.text && <div className={`${isOwner ? "owner" : "not-owner"} bg-[blue] w-fit p-1 max-w-[200px] rounded-b-lg`} style={{ padding: '10px' }}>
                     { message.text }
                 </div>}
                 { message.image && <img className='w-36 my-2' src={message.image} alt="" />}
                 {message.audio && <div>
                     <audio ref={audio} className="hidden" src={message.audio} controls></audio>
-                    <div className='bg-primary w-64 flex items-center justify-between px-3 py-2 rounded-md'>
+                    <div className='bg-[blue] w-64 flex items-center justify-between px-3 py-2 rounded-md'>
                         {
                             isPlaying ? <CiPause1 onClick={handlePause} cursor={"pointer"} /> : <FiPlay onClick={handlePlay} cursor={"pointer"} />
                         }
